@@ -19,8 +19,8 @@ axios.interceptors.request.use(
 );
 
 axios.interceptors.response.use(
+  // eslint-disable-next-line
   (response) => {
-    console.log(response);
     // Edit response config
     return response;
   },

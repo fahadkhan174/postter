@@ -1,5 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 // layouts
 import DashboardLayout from './layouts/dashboard';
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
@@ -13,12 +14,23 @@ import Blog from './pages/Blog';
 import User from './pages/User';
 import NotFound from './pages/Page404';
 import Unauthorised from './pages/Unauthorised';
-
+//
+import tokenService from './components/auth/Token.service';
+import { authConstants } from './store/actionTypes';
+//
 const Login = lazy(() => import('./pages/Login'));
-
 // ----------------------------------------------------------------------
 
 export default function Router() {
+  const dispatch = useDispatch();
+
+  // setting redux user from local storage
+  useEffect(() => {
+    if (tokenService.getUser()) {
+      dispatch({ type: authConstants.USER_SIGNIN_SUCCESS, payload: tokenService.getUser() });
+    }
+  }, [dispatch]);
+
   return useRoutes([
     {
       path: '/',

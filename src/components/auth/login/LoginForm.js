@@ -34,7 +34,7 @@ export default function LoginForm() {
     if (authenticated) {
       navigate((state && state.path) || '/home');
     }
-  }, [authenticated, navigate, state]);
+  }, [authenticated, state, navigate]);
 
   const LoginSchema = Yup.object().shape({
     username: Yup.string().required('Username is required'),
