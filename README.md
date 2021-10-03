@@ -2,13 +2,13 @@
 
 ## Page demo
 
-- [Dashboard](https://minimal-kit-react.vercel.app/dashboard/app)
-- [Users](https://minimal-kit-react.vercel.app/dashboard/user)
-- [Product](https://minimal-kit-react.vercel.app/dashboard/products)
-- [Blog](https://minimal-kit-react.vercel.app/dashboard/blog)
-- [Login](https://minimal-kit-react.vercel.app/login)
-- [Register](https://minimal-kit-react.vercel.app/register)
-- [Not Found](https://minimal-kit-react.vercel.app/404)
+- [Dashboard](http://localhost:3000/admin/dashboard)
+- [Users](http://localhost:3000/user)
+- [Product](http://localhost:3000/products)
+- [Blog](http://localhost:3000/blog)
+- [Login](http://localhost:3000/login)
+- [Register](http://localhost:3000/register)
+- [Not Found](http://localhost:3000/404)
 
 ## Getting started
 
@@ -18,7 +18,7 @@
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/fahadkhan174/postter/blob/master/LICENSE.md) for more information.
 
 ## Contact us
 
