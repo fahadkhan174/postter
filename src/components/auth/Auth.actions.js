@@ -25,7 +25,6 @@ const signin = (values) => async (dispatch) => {
     })
     .catch((error) => {
       dispatch({ type: authConstants.USER_SIGNIN_FAILURE, payload: error.response });
-      dispatch(addAlert('LOGIN ERROR', alertTypes.ERROR));
     });
 };
 

@@ -118,7 +118,7 @@ export default function AccountPopover() {
             fullWidth
             color="inherit"
             variant="outlined"
-            onClick={dispatch(authActions.signout())}
+            onClick={() => dispatch(authActions.signout())}
           >
             Logout
           </Button>

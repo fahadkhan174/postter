@@ -32,7 +32,7 @@ class Initializer implements CommandLineRunner {
 		roleRepository.save(new Role(ERole.ROLE_ADMIN));
 		roleRepository.findAll().forEach(System.out::println);
 
-		Role role = roleRepository.findByName(ERole.ROLE_MODERATOR)
+		Role role = roleRepository.findByName(ERole.ROLE_ADMIN)
 				.orElseThrow(() -> new RuntimeException("Cannot find ROLE_USER"));
 
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

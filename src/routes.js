@@ -28,18 +28,22 @@ export default function Router() {
         { path: 'home', element: <Home /> },
         { path: 'user', element: <User /> },
         { path: 'products', element: <Products /> },
-        { path: 'blog', element: <Blog /> }
+        { path: 'blog', element: <Blog /> },
+        { path: 'admin', element: <Navigate to="/admin/dashboard" replace /> }
       ]
     },
     {
       path: '/admin',
       element: <DashboardLayout />,
       children: [
-        { path: 'dashboard', element: <DashboardApp /> },
         {
-          path: 'user',
+          path: 'dashboard',
           element: (
-            <Guard path="/admin/user" element={<User />} roles={['ROLE_ADMIN', 'ROLE_MODERATOR']} />
+            <Guard
+              path="/admin/dashboard"
+              element={<DashboardApp />}
+              roles={['ROLE_ADMIN', 'ROLE_MODERATOR']}
+            />
           )
         }
       ]
@@ -59,7 +63,6 @@ export default function Router() {
         { path: 'register', element: <Register /> },
         { path: '401', element: <Unauthorised /> },
         { path: '404', element: <NotFound /> },
-        { path: 'admin', element: <Navigate to="/admin/dashboard" replace /> },
         { path: '*', element: <Navigate to="/404" /> }
       ]
     },
