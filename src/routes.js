@@ -14,6 +14,7 @@ import Blog from './pages/Blog';
 import User from './pages/User';
 import NotFound from './pages/Page404';
 import Unauthorised from './pages/Unauthorised';
+import Form from './components/form/Form';
 //
 import tokenService from './components/auth/Token.service';
 import { authConstants } from './store/actionTypes';
@@ -41,6 +42,7 @@ export default function Router() {
         { path: 'user', element: <User /> },
         { path: 'products', element: <Products /> },
         { path: 'blog', element: <Blog /> },
+        { path: 'form', element: <Form /> },
         { path: 'admin', element: <Navigate to="/admin/dashboard" replace /> }
       ]
     },

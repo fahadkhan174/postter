@@ -33,7 +33,8 @@ export default (state = initialState, action) => {
     case authConstants.USER_SIGNIN_REQUEST:
       return {
         ...state,
-        loading: true
+        loading: true,
+        error: null
       };
     case authConstants.USER_SIGNIN_SUCCESS:
       return {
